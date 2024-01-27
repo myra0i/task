@@ -44,6 +44,8 @@ const Auth = () => {
   return (
     <div className='auth-container'>
       <div className='auth-container-box'>
+        <h1 className='heading-title'>Task Zen</h1>
+        <p className='intro-text'>Streamlining your productivity</p>
         <form>
           <h2>{isLogIn ? 'Please log in' : 'Please sign up'}</h2>
           <input type='email' placeholder='email' onChange={(e)=>setEmail(e.target.value)}/>
