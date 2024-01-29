@@ -8,6 +8,7 @@ import Calendar from './components/Calendar.js'
 
 
 
+
 function App() {
   const [cookies, setCookie, removeCookie] = useCookies(null)
   const authToken = cookies.AuthToken
@@ -46,8 +47,6 @@ function App() {
         <>
         <ListHeader ListName={'Let Us Organize You World'} getData={getData}/>
        <Calendar />
-
-      
        <p className='task-name'>Welcome:{userEmail}</p>
       {sortedTasks?.map( (task) => <ListItem key={task.id} task = {task} getData={getData}/>)}
       {sortedTasks?.map( (task) => <Dashboard key={task.id} task = {task} getData={getData} />)}

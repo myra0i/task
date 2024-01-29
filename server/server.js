@@ -27,9 +27,6 @@ app.get('/todos/:userEmail', async(req, res)=>{
 })
 
 
-
-
-
 //create
 
 app.post('/todos', async(req, res)=> {
@@ -45,16 +42,7 @@ app.post('/todos', async(req, res)=> {
     } 
 })
 
-app.get('/todos/:dates', async (req,res)=> {
-    const {date} = req.params
-    try {
-        const result = await pool.query('SELECT FROM todos WHERE date = $1', {date});
-       
-        res.json(result);
-    } catch (err) {
-        console.error(err)
-    }
-}) 
+
 
 
 //edit

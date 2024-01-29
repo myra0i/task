@@ -68,7 +68,7 @@ const Modal = ({mode, setShowModal, getData, task}) => {
       getData()
       await fetchDates() 
       .then((data) => setMarkedDates(data))
-    console.log(markedDates);
+    
       
       }
      
